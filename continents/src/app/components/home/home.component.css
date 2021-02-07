@@ -1,0 +1,11 @@
+.content {
+    width: 600px;
+    height: 400px;
+    line-height: 400px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.content img {
+    vertical-align: middle;
+}

@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div>
+            <img src="../../../favicon.ico" alt="" width="30" height="30" class="d-inline-block align-top">
+        </div>
+        <a class="navbar-brand" href="#">&nbsp;Countries</a>
+        <button class="navbar-toggler btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 active ">
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Continent
+            </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a [routerLink]="['continent','Africa', '1']" class="dropdown-item" href="#">Africa</a></li>
+                        <li><a [routerLink]="['continent','Americas', '1']" class="dropdown-item" href="#">America</a></li>
+                        <li><a [routerLink]="['continent','Asia', '1']" class="dropdown-item" href="#">Asia</a></li>
+                        <li><a [routerLink]="['continent','Europe', '1']" class="dropdown-item" href="#">Europa</a></li>
+                        <li><a [routerLink]="['continent','Oceania', '1']" class="dropdown-item" href="#">Oceania</a></li>
+
+
+                    </ul>
+                </li>
+
+
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Languages
+                  </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Select a language</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div *ngFor="let lang of languages">
+                                    <button [routerLink]="['language', lang.code , '2']" type="button" class="btn" data-bs-dismiss="modal" style="width: 100%;">{{lang.name}} </button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2 " type="search" placeholder="Search a country" aria-label="Search" #searchCountry>
+                <button (click)="searchCountries(searchCountry.value);searchCountry.value = '' " class="btn  btn-outline-light " type="button">Search</button>
+            </form>
+
+        </div>
+    </div>
+
+</nav>

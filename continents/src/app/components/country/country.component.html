@@ -1,0 +1,21 @@
+<h4 [attr.aria-label]="type" style="text-align:center">{{type}} </h4>
+<hr>
+<div class="row row-cols-1 row-cols-md-6 g-4">
+    <div *ngFor="let country of countries" class="col">
+        <div *ngIf="countries.length == 0" class="card text-white bg-primary mb-3" style="width: 100%;">
+            <img src="../../../assets/img/no_results.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="card h-100 animated fadeIn fast">
+            <img src="{{country.flag}}" class="card-img-top " alt="... ">
+            <div class="card-body ">
+                <h5 class="card-title ">{{country.name}}</h5>
+            </div>
+            <ul class="list-group list-group-flush ">
+                <li class="list-group-item ">Capital: {{country.capital}}</li>
+                <li class="list-group-item ">Region: {{country.region}}</li>
+                <li class="list-group-item ">Area: {{country.area}}</li>
+                <li class="list-group-item ">Population: {{country.population}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

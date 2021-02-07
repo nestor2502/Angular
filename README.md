@@ -1,7 +1,7 @@
 # Angular
 Proyectos usando framework Angular.
 
-##Run
+## Run
 Para correr cualquiera de ellos es necesario instalar los modulos de node, 
 estos se instalan con el comando `npm install` dentro de un proyecto, 
 luego para poder correrlo es necesario usar el comando `ng serve`,

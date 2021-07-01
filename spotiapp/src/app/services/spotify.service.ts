@@ -11,13 +11,11 @@ export class SpotifyService {
   constructor(private http:HttpClient) {
     console.log("servicio listo")
    }
-    
    getQuery(query:string){
-     
      const url = `https://api.spotify.com/v1/${ query }`;
 
      const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQBKirgWRRu6_Xa4dhQBVfm0kMuLJP_mouGWnoqlEmgQBJ0DxSXbYGyOutNNn_PehKgcVNnRFWLEXdUpAnE'
+      'Authorization': 'Bearer BQBoTOEbUjEoyKZ1BYLOqTsl7pqFLzNHXo6IlO1QJ1M3BE_AUXAV97HYsd6DwHPGDDbPbRyoihQWkJOyeaY'
       });
 
       return this.http.get(url, {headers});
